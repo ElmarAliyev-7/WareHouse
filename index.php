@@ -1,3 +1,8 @@
 <?php
+require_once 'db.php';
+require 'layouts/header.php';
+?>
 
-require 'db.php';
+
+<?php
+require 'layouts/footer.php';
