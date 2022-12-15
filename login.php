@@ -1,9 +1,23 @@
 <?php
+require "db.php";
 include "layouts/header.php";
 
-if(isset($_POST['login_submit'])){
-    print_r($_POST);
+if (isset($_POST['login_submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if (!$username || !$password) {
+        echo '<div class="alert alert-warning">Butun saheler doldurulmalidi</div>';
+    } else {
+        $hashed_pass = md5($password);
+        $sql    = "SELECT * FROM users WHERE username='$username' AND password='$hashed_pass'";
+        foreach  ($conn->query($sql) as $row) {
+            print $row['username'] . "\n";
+            print  $row['password'] . "\n";
+        }
+    }
 }
+
 ?>
 
 <style>
