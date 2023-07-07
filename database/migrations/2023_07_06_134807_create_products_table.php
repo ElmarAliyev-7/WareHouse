@@ -23,7 +23,6 @@ return new class extends Migration
             $table->integer('discount_price')->default(0);
             $table->string('image')->nullable();
             $table->integer('count');
-            $table->enum('is_gift', [0,1])->default(0);
             $table->timestamps();
         });
     }

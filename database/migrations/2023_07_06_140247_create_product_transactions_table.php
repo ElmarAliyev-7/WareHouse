@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('transaction_id')->constrained();
             $table->foreignId('product_id')->constrained();
+            $table->integer('price');
             $table->timestamps();
         });
     }

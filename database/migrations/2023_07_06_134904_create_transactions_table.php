@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
+//            $table->foreignId('depot_id')->constrained();
             $table->enum('is_enter', [0,1]);
             $table->timestamps();
         });

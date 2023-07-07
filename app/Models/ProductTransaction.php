@@ -11,5 +11,5 @@ class ProductTransaction extends Model
 
     protected $table = 'product_transactions';
 
-    protected $fillable = ['transaction_id', 'product_id'];
+    protected $fillable = ['transaction_id', 'product_id', 'price'];
 }

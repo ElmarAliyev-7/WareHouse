@@ -11,5 +11,5 @@ class Transaction extends Model
 
     protected $table = 'transactions';
 
-    protected $fillable = ['user_id', 'is_enter'];
+    protected $fillable = ['user_id', 'is_enter']; //'depot_id',
 }
